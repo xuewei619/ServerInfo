@@ -1,0 +1,47 @@
+name: LoginPlugin
+main: com.serverinfo.plugins.LoginPlugin
+version: 0.0.1
+author: xuewei
+commands: 
+ login: 
+  description: login
+  usage: /login [password]
+  permission: info.login
+  permission-message: You don't have permission
+ reg: 
+  description: reg
+  usage: /reg [password]
+  permission: info.reg
+  permission-message: You don't have permission
+ arrow: 
+  description: arrow
+  usage: /arrow
+  permission: info.arrow
+  permission-message: You don't have permission
+ noarrow: 
+  description: noarrow
+  usage: /noarrow
+  permission: info.noarrow
+  permission-message: You don't have permission
+
+permissions: 
+ info.*:
+  description: info
+  children: 
+   info.login: true
+   info.reg: true
+   info.arrow: true
+   info.noarrow: true
+ info.login:
+  description: login
+  default: true
+ info.reg:
+  description: reg
+  default: true
+ info.arrow:
+  description: arrow
+  default: true
+ info.noarrow:
+  description: noarrow
+  default: true
+
